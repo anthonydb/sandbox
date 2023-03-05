@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
+        <!-- End Google Tag Manager -->
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="me" href="https://opalstack.social/@anthonydb">
+
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <!-- Jetpack Site Verification Tags -->
+        <meta name="google-site-verification" content="3cXq7qpM2caPBH74yvmYJYdTIw18jO5ESgpf1JNMRTw" />
+
+        <title>Visualizing U.S. Births - Anthony DeBarros</title>
+        <link rel="canonical" href="https://anthonydebarros.com/data-miscellany/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Charting U.S. Births - Anthony DeBarros" />
+        <meta property="og:description" content="Visualizing U.S. births and birth rates." />
+        <meta property="og:url" content="https://anthonydebarros.com/data-miscellany/visual-us-births/" />
+        <meta property="og:site_name" content="Anthony DeBarros" />
+        <meta property="article:modified_time" content="2023-03-02T01:06:03+00:00" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@anthonydb" />
+        <meta name="twitter:label1" content="Est. reading time" />
+        <meta name="twitter:data1" content="1 minute" />
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+
+        <link rel='stylesheet' id='google-fonts-css' href='https://fonts.googleapis.com/css?family=Arvo:400,700|PT+Sans:400,700|PT+Serif:400,700|Fira+Sans:400,200|Roboto:400,700' type='text/css' media='all' />
+        <link rel='stylesheet' id='open-sans-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;display=fallback&#038;ver=6.1.1' type='text/css' media='all' />
+
+    </head>
+
+    <body class="page-template-default page page-id-2">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLD8S5"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container" style="padding: 50px 0 0 0;">
+
+        <div id="primary">
+            <div id="content" role="main">
+                <article class="post">
+                    <h1 class="title">Visualizing U.S. Births</h1>
+                    <div class="the-content">
+
+                        <p>To check out the features in the chart/map tool <a href="https://www.datawrapper.de/" target="_blank">Datawrapper</a>, I grabbed data I've followed for many years: birth and death trends in the U.S.</p>
+                        <p>The data come from the <a href="https://www.cdc.gov/nchs/index.htm" target="_blank">National Center for Health Statistics</a>, which is part of the Centers for Disease Control and Prevention. NCHS publishes data on births and deaths annually, albeit at different cadences.</p>
+                        <p>This simple line chart shows births and deaths in the U.S. since 1930:</p>
+                        <p>
+                            <iframe title="U.S. Births and Deaths, 1910-2023" aria-label="Interactive line chart" id="datawrapper-chart-9DE6Y" src="https://datawrapper.dwcdn.net/9DE6Y/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                            </script>
+                        </p>
+                        <p>Notice the Baby Boom following World War II, the relative dearth of babies born during the early 1970s (hello, Gen X), followed by what demographers initially called the "echo boom" before Millennials became the preferred term for people born starting in the early 1980s. Generational changes in deaths have been less volatile, increasing as the U.S. population grew — until the Covid-19 pandemic hit.</p>
+                        <p>During Covid, the U.S. for the first time came close to having more deaths than births. The ratio of births to deaths fell to 1.06 in 2021:</p>
+                        <p>
+                            <iframe title="U.S. Births per Death" aria-label="Interactive line chart" id="datawrapper-chart-ULsMq" src="https://datawrapper.dwcdn.net/ULsMq/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="400" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                            </script>
+                        </p>
+                        <p>Finally, to check out Datawrapper's mapping tool, here's the U.S. total fertility rate by state in 2021. The total fertility rate estimates the number of births that a hypothetical group of 1,000 women would have over their lifetimes, based on the age-specific birth rate in a given year. Here, I've converted the values to a per-woman rate.</p>
+                        <p>
+                            <iframe title="Total Fertility Rate by State, 2021" aria-label="Map" id="datawrapper-chart-lOlYe" src="https://datawrapper.dwcdn.net/lOlYe/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="483" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(e){if(void 0!==e.data["datawrapper-height"]){var t=document.querySelectorAll("iframe");for(var a in e.data["datawrapper-height"])for(var r=0;r<t.length;r++){if(t[r].contentWindow===e.source)t[r].style.height=e.data["datawrapper-height"][a]+"px"}}}))}();
+                            </script>
+                        </p>
+                        <p>The so-called "replacement rate," or the average number of children a woman would need to have in her lifetime for the population to remain steady, is 2.1. The U.S. average in 2021 was 1.664 births per woman. Although every state was below replacement level, there's considerable variation.</p>
+
+                    </div><!-- the-content -->
+                 </article>
+            </div><!-- #content .site-content -->
+        </div><!-- #primary .content-area -->
+    </div><!-- / container-->
+
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="site-info container">
+            <p><a href="https://www.anthonydebarros.com">Home</a> | <a href="https://www.anthonydebarros.com/sandbox/">Sandbox</a> | <a href="https://www.practicalsql.com">Book</a> | <a href="https://www.anthonydebarros.com/about/">About</a><br/>
+                Copyright 2023 Anthony DeBarros<br />
+            Hosted by <a href="https://my.opalstack.com/signup?lmref=MJKmdw" style="color: #a9a9a9;">Opalstack</a><br />
+            <a href="/privacy-policy" style="color: #a9a9a9;">Privacy Policy</a></p>
+        </div><!-- .site-info -->
+    </footer><!-- #colophon .site-footer -->
+
+    </body>
+</html>

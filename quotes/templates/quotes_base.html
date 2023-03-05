@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
+      <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'quotes.css' %}" />
+    <link href='https://fonts.googleapis.com/css?family=Lusitana:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+         // Hide the view div
+         $('div.view').hide();
+         // toggle
+         $('div.slide').click(function() {
+           $('div.view').fadeToggle('fast', function() {
+            // Done
+           });
+         });
+      });
+      </script>
+    <title>Words on Art {% block title %}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLD8S5"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+      <div class="slide" style="cursor: pointer;">+</div>
+      <div class="view">
+         <h2>Words on Art</h2>
+         <div class="viewlist">
+           <a href="{% url 'authors' %}">Authors</a><br/>
+           <a href="{% url 'categories' %}">Categories</a><br/>
+           <a href="{% url 'search_quotes' %}">Search</a><br/>
+           <a href="{% url 'suggest' %}">Suggest</a></br>
+           <a href="{% url 'info' %}">About</a><br/>
+         </div>
+      </div>
+
+      <div id="container">
+       <div id="header">
+       </div>
+            {% block content %}
+            {% endblock %}
+        <div id="footer">
+        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    font-family: 'Lusitana', Georgia, Arial, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    vertical-align: top;
+    background: #FFFFFF;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: -2px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+h2 {
+    font-family: 'Lusitana', Arial;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #000000;
+    margin: 0 0 2px 0;
+}
+
+/* Links */
+a {
+    color: #007998;
+    -webkit-transition: color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+    text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+    color: rgba(0, 121, 152, 0.5);
+}
+
+p {
+    padding: 10px 0 0 0;
+}
+
+input.button {
+    font-family: 'Lusitana', Arial;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#container {
+    margin: 10px 20px 0 auto;
+    padding: 0 12px 0 12px;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+/* Menu div classes */
+.slide {
+    font-family: 'Lusitana', Arial;
+    font-size: 90px;
+    float: right;
+    padding: 0 20px 20px 20px;
+    margin: 0 20px 0 10px;
+    color: #FFFFFF;
+    background-color: #E0EEEE;
+}
+
+.view {
+    font-family: 'Lusitana', Arial;
+    line-height: 20px;
+    float: right;
+    color: #FFFFFF;
+    margin: 10px 10px 0 0;
+}
+
+.viewlist {
+    padding: 6px 0 0 6px;
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Large quote style */
+
+#markl {
+    float: left;
+    font-size: 600%;
+    margin: 0 6px 700px 0;
+    color: #E0EEEE;
+}
+
+#quote {
+    font-family: 'Lusitana', Georgia;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    text-align: left;
+    width: 90%;
+    margin: 0 20px 0 0;
+    padding: 90px 0 180px 0;
+}
+
+#attribute {
+    font-family: 'Lusitana', Georgia;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    text-align: left;
+    padding: 8px 50px 0 0;
+}
+
+#source {
+    font-family: Arial;
+    font-size: 14px;
+    letter-spacing: -1px;
+    text-align: left;
+    margin: 12px 0 0 0;
+    color: #989898;
+    width: 90%;
+}
+
+#tag {
+    font-family: Arial;
+    font-size: 14px;
+    letter-spacing: -1px;
+    text-align: left;
+    padding: 6px 50px 0 0;
+    color: #989898;
+}
+
+#social {
+    text-align: left;
+    width: 90%;
+    clear: right;
+    margin: 12px 0 12px 0;
+}
+
+#reloader {
+    margin: 60px 0 0 0;
+    padding 0;
+}
+
+/* Item list style */
+
+#list {
+    font-family: 'Lusitana', Georgia, Arial;
+    font-size: 18px;
+    text-align: left;
+    width: 90%;
+    margin: 90px 12px 180px 12px;
+}
+
+#list ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
+}
+
+#list ul li {
+    padding: 4px 0 3px 0;
+    line-height: 20px;
+}
+
+#sectiondescriptor {
+    font-family: 'Lusitana', Georgia, Arial;
+    font-size: 26px;
+    letter-spacing: -1px;
+    text-align: left;
+}
+
+/* Button */
+
+.btn {
+    background-color: #007998;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: none;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 6px 10px;
+    text-decoration: none;
+}
+.btn:hover {
+    background-color: #007998;
+}
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Miscellany */
+
+#footer {
+    width: 100%;
+    height: 180px;
+}
+
+#message {
+    font-family: Arial;
+    color: #F80000;
+    width: 100%;
+    height: 14px;
+    margin: 6px 0 6px 0;
+}
+
+#about {
+    font-family: 'Lusitana', Georgia, Arial;
+    font-size: 16px;
+    text-align: left;
+    width: 90%;
+    margin: 90px 12px 180px 12px;
+    padding: 0 20px 0 0;
+}

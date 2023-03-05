@@ -1,0 +1,34 @@
+{% extends "quotes_base.html" %}
+
+{% block title %}| {% for category_name in categories %}{{ category_name.category }} {% endfor %}{% endblock %}
+{% block description %}A collection of quotes about {% for category_name in categories %}{{ category_name.category }}{% endfor %} in Words on Art.{% endblock %}
+
+{% block content %}
+
+<div id="list">
+   <div id="sectiondescriptor">
+      {% for category_name in categories %}
+         <b>{{ category_name.category }}</b>
+      {% endfor %}
+   </div>
+   <ul>
+      {% regroup categories_quote_list by author as categories_quotes_by_author %}
+         {% for author in categories_quotes_by_author %}
+            <li>
+               <b><a href="{{ author.grouper.get_absolute_url }}">{{ author.grouper }}</a></b>:<br/>
+               <ul>
+                  {% for item in author.list %}
+                     <li>{{ item.quote }} <span id="tagelements"><a href="{{ item.get_absolute_url }}">&#182</a> | 
+                        {% for category in item.categories.all %} <a href="{{ category.get_absolute_url }}">{{ category.category }}</a>
+                           {% if forloop.last %}{% else %}
+                           {% if forloop.revcounter0 == "1" %}&amp; {% else %}, {% endif %}
+                           {% endif %}
+                        {% endfor %} 
+                     </li>
+                     </span>
+                  {% endfor %}
+               </ul>
+            </li>
+         {% endfor %}
+   </ul>
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
+      <!-- End Google Tag Manager -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'booklist.css'%}" />
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <title>anthonydb.com Books API Example</title>
+    <meta name="description" content="New York Times Fiction Bestsellers">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLD8S5"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+      <div id="container">
+      <div id="main">
+
+      <h2>The New York Times: Fiction Bestsellers</h2>
+      <div id="chatter">
+      The top 15 "Combined Print and E-Book Fiction" titles for {{ list_date }}, fetched from <a href="https://developer.nytimes.com/docs/books-product/1/overview" target="_blank">The New York Times Books API</a>.
+      </div>
+
+      <div id="list">
+        <ul>
+        {% for entry in top_list %}
+            <li>{{ entry.rank }} ({{ entry.rank_lw }}). <a href="{{ entry.amazon_link }}">{{ entry.title }}</a>, {{ entry.author }} / {{ entry.description }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+
+      <div id="tag">
+         <a href="http://developer.nytimes.com"><img src="/static/poweredby_nytimes_200a.png" /></a>
+      </div>
+
+      </div>
+      </div>
+</body>
+</html>

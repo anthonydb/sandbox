@@ -1,0 +1,24 @@
+{% extends "sotu_base.html" %}
+
+{% block title %}| Analyze{% endblock %}
+{% block description %}SOTU Analyze{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h2>Presidential Speech List</h2>
+        </div>
+        <div class="row mt-3">
+            {% regroup speech_list by president as new_list %}
+
+            {% for x in new_list %}
+                <ul><b>{{ x.grouper }}</b>
+                    {% for item in x.list %}
+                        <ul>{{ item.speech_date }}:  {{ item.title }}. <a href="/sotu/speech/{{ item.id }}"/>Text</a></ul>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

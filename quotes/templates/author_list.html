@@ -1,0 +1,17 @@
+{% extends "quotes_base.html" %}
+
+{% block title %}| Authors{% endblock %}
+{% block description %}List of all people whose sayings are collected in Words on Art.{% endblock %}
+
+{% block content %}
+    <div id="list">
+       <div id="sectiondescriptor">
+          <b>Authors, artists, musicians ...</b>
+       </div>
+    <ul>
+        {% for author in authors_list %}
+            <li><a href="{{ author.get_absolute_url }}">{{ author.last_name }}, {{ author.first_name }}</a>. {{ author.brief_bio }}</li>
+        {% endfor %}
+     </ul>
+     </div>
+{% endblock %}

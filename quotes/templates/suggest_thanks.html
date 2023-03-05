@@ -1,0 +1,11 @@
+{% extends "quotes_base.html" %}
+
+{% block title %}| Thanks{% endblock %}
+{% block description %}Thanks for suggesting a quote!{% endblock %}
+
+{% block content %}
+    <h2>Thanks!</h2>
+    <br/>
+    We'll review your suggestion and, if it fits what we're doing here, we'll add it.<br/>
+    Feel free to  <a href="{% url 'suggest' %}">suggest another quote</a></br>
+{% endblock %}

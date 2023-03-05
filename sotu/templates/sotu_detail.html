@@ -1,0 +1,18 @@
+{% extends "sotu_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}| Presidential Speeches Search{% endblock %}
+{% block description %}Presidential Speeches Search{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h2>Speech Detail</h2>
+        </div>
+        <div class="row mt-3">
+            <h4>{{ object.president }}</h4>
+            <p><strong>{{ object.title }}, {{ object.speech_date }}</strong></p>
+            <p>{{ object.speech_text|linebreaksbr }}</p>
+        </div>
+    </div>
+{% endblock %}

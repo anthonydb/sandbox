@@ -1,0 +1,17 @@
+{% extends "quotes_base.html" %}
+
+{% block title %}| Categories{% endblock %}
+{% block description %}Categories of quotes collected in Words on Art.{% endblock %}
+
+{% block content %}
+    <div id="list">
+    <div id="sectiondescriptor">
+    <b>Categories</b>
+    </div>
+    <ul>
+        {% for categories in categories_list %}
+            <li><a href="{{ categories.get_absolute_url }}">{{ categories.category }}</a></li>
+        {% endfor %}
+     </ul>
+     </div>
+{% endblock %}

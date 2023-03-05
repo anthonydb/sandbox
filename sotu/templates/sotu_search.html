@@ -1,0 +1,50 @@
+{% extends "sotu_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}| Presidential Speeches Search{% endblock %}
+{% block description %}Presidential Speeches Search{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h2>Search U.S. Presidents' State of the Union Speeches</h2>
+        </div>
+        <div class="row mt-3">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.text_to_search|as_crispy_field }}
+                {{ form.president_to_search|as_crispy_field }}            
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.date_from|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.date_through|as_crispy_field }}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark">Search</button>
+            </form>
+        </div>
+
+        {% if results_list %}
+            {% if results_list != "None" %}
+                <div class="row mt-4">
+                    <h3>Results for <b>{{ term }}</b>:</h3>
+                </div>
+                <div class="row mt-3">
+                        {% for result in results_list %}
+                            {% if result != "None" %}
+                            <p><b>{{ result.president }}</b>, {{ result.speech_date }}. {{ result.title }}. <a href="/sotu/speech/{{ result.id }}"/>Full text</a></p>
+                            <p>... {{ result.ts_headline|safe }} ... </p>
+                            {% endif %}
+                        {% endfor %}
+                </div>
+            {% else %}
+                <div class="row mt-4">
+                    <h3>No results for <b>{{ term }}</b></h3>
+                </div>
+            {% endif %}
+
+        {% endif %}
+    </div>
+{% endblock %}
