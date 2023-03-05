@@ -1,0 +1,12 @@
+.DS_Store
+*.pyc
+__pycache__/
+
+*.db
+/temp/
+/anthonydb/all_static/
+/anthonydb/.env
+__old__*
+*.txt
+jquery-*
+/data_miscellany/keys.py
