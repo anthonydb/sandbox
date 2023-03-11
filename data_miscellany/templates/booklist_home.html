@@ -1,17 +1,21 @@
 {% extends "booklist_base.html" %}
 
-{% block title %}| The New York Times Bestseller Lists{% endblock %}
+{% block title %}| Best-Selling Books API Demo{% endblock %}
 
 
 {% block content %}
     <div id="main">
-        <h2>The New York Times Bestseller Lists</h2>
-        <p>This is a demo for using an API as a content resource. In this case,
-            the book bestseller lists from The New York Times.</p>
-            <ol>
-                <li><a href="/data-miscellany/booklist/fiction/">Fiction Bestsellers</a></li>
+        <h2>Best-Selling Books API Demo</h2>
+        <p>APIs are a wonderous resource. Make a request to a URL, get back some data. It just works!</p>
+        <p>Some years ago, I managed data-gathering and analysis for the USA Today Best-Selling Books list,
+            which sadly is <a href="https://booklist.usatoday.com/">on hiatus</a>. But I can still keep my eye on best-sellers by using an API from
+            <a href="https://developer.nytimes.com/docs/books-product/1/overview">The New York Times</a>.</p>
+        <p>The demo fetches two latest lists from its Books API:</p>
+            <ul>
                 <li><a href="/data-miscellany/booklist/nonfiction/">Nonfiction Bestsellers</a></li>
-            </ol>
+                <li><a href="/data-miscellany/booklist/fiction/">Fiction Bestsellers</a></li>
+            </ul>
+        <p>The API call as a Python function is <a href="https://github.com/anthonydb/sandbox/blob/main/data_miscellany/api.py">here</a>.</p>
     </div>
 
 {% endblock %}

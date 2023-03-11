@@ -32,6 +32,7 @@ def fetch_nyt_booklist(list_type):
             books_dict['author'] = book['book_details'][0]['author']
             books_dict['description'] = book['book_details'][0]['description']
             books_dict['amazon_link'] = book['amazon_product_url']
+            books_dict['publisher'] = book['book_details'][0]['publisher']
             top_list.append(books_dict)
 
     except ValueError:

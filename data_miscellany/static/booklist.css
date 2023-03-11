@@ -63,8 +63,8 @@ p
 #list ul {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 1em;
-    text-indent: -1em;
+    padding-left: 2.4em;
+    text-indent: -2.4em;
 }
 
 #list ul li {

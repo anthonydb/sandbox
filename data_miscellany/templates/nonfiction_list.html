@@ -13,7 +13,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'booklist.css'%}" />
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <title>anthonydb.com Books API Example</title>
+    <title>Anthony DeBarros | Books API Example</title>
     <meta name="description" content="New York Times Nonfiction Bestsellers">
 </head>
 <body>
@@ -26,13 +26,15 @@
 
       <h2>The New York Times: Nonfiction Bestsellers</h2>
       <div id="chatter">
-      The top 15 "Combined Print and E-Book Nonfiction" titles for {{ list_date }}, fetched from <a href="https://developer.nytimes.com/docs/books-product/1/overview" target="_blank">The New York Times Books API</a>.
+        <p>The top 15 "Combined Print and E-Book Nonfiction" titles for {{ list_date }}, fetched from <a href="https://developer.nytimes.com/docs/books-product/1/overview" target="_blank">The New York Times Books API</a>.</p>
+        <p><b>Nonfiction</b> | <a href="/data-miscellany/booklist/fiction/">Fiction</a> | <a href="/data-miscellany/booklist/">About</a> | <a href="/">Home</a></p>  
       </div>
 
       <div id="list">
         <ul>
         {% for entry in top_list %}
-            <li>{{ entry.rank }} ({{ entry.rank_lw }}). <a href="{{ entry.amazon_link }}">{{ entry.title }}</a>, {{ entry.author }} / {{ entry.description }}</li>
+            <li>{{ entry.rank }} ({{ entry.rank_lw }}). <a href="{{ entry.amazon_link }}">{{ entry.title }}</a>, {{ entry.author }} ({{ entry.publisher }})<br/>
+              {{ entry.description }}</li>
         {% endfor %}
         </ul>
       </div>

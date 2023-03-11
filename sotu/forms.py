@@ -27,7 +27,6 @@ class SearchForm(ModelForm):
 
 def search_sotu(request):
     if request.method == 'POST':
-        print("possst")
         form = SearchForm(request.POST)
         if form.is_valid():
             print("IS VALID")
