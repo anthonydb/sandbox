@@ -69,11 +69,11 @@ class Quote(models.Model):
 
 
 class Submission(models.Model):
-    item = models.TextField()
+    item = models.CharField(max_length=1000)
     name = models.CharField(max_length=200)
     email = models.EmailField()
     date = models.DateTimeField(auto_now=True)
-    source = models.TextField()
+    source = models.CharField(max_length=400)
     ip_address = models.CharField(max_length=30)
     misc_headers = models.CharField(max_length=500)
 
