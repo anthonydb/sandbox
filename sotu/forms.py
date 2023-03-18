@@ -1,8 +1,6 @@
 import datetime
-# from django.template import RequestContext
 from sotu.models import Speech
 from django.shortcuts import render
-# from django.http import HttpResponseRedirect
 from django import forms
 from django.forms import ModelForm, Textarea
 
