@@ -1,8 +1,8 @@
 import datetime
-from django.template import RequestContext
+# from django.template import RequestContext
 from sotu.models import Speech
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+# from django.http import HttpResponseRedirect
 from django import forms
 from django.forms import ModelForm, Textarea
 
@@ -11,14 +11,14 @@ class SearchForm(ModelForm):
     """
     Form for searching president's speeches.
     """
-    text_to_search = forms.CharField(label='Search terms (enclose phrases in quotes; exclude a word by prepending a hyphen)',
+    text_to_search = forms.CharField(label='Search terms (put phrases in quotes; exclude a word by prepending a hyphen)',
                             widget=Textarea(attrs={'cols': 50, 'rows': 1})
                             )
     president_to_search = forms.CharField(label='President (any part of a name)', required=False, 
                             widget=Textarea(attrs={'cols': 50, 'rows': 1})
                             )
-    date_from = forms.DateField(label='From (yyyy-mm-dd)', initial='1946-01-01')
-    date_through = forms.DateField(label='Through (yyyy-mm-dd)', initial=datetime.date.today)
+    date_from = forms.DateField(label='From (yyyy-mm-dd)', initial='1940-01-01')
+    date_through = forms.DateField(label='To (yyyy-mm-dd)', initial=datetime.date.today)
 
     class Meta:
         model = Speech

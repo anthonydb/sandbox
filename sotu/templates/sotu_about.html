@@ -7,18 +7,19 @@
     <div class="container">
         <div class="row">
             <h2>Presidents' Speeches</h2>
-            <p>This is a demo of PostgreSQL's <a href="https://www.postgresql.org/docs/current/textsearch.html">full-text search</a> features. 
-                It uses the <code>websearch_to_tsquery()</code> function, which converts user input to a <code>tsquery</code> value and allows
-            additional user controls. For example, placing words in quotes allows for adjacency queries. A minus sign allows for exclusion of a word.</p>
-            <p>The database contains more than 80 speeches made by U.S. presidents to Congress from 1946 to 2023. Most are "State of the Union" speeches typically delivered at the beginning of the year.</p>
-            <p>Try a <a href="/sotu/search/">search</a> or see a <a href="/sotu/list/">list of speeches</a>.</p>
+            <p>Chapter 14 of <a href="https://www.practicalsql.com" class="link-dark">Practical SQL</a> covers PostgreSQL's excellent <a href="https://www.postgresql.org/docs/current/textsearch.html" class="link-dark">full-text search</a> features.  
+                To show these in action, I built a simple Django app that uses the PostgreSQL <code>websearch_to_tsquery()</code> function to convert search terms to a <code>tsquery</code> value, allowing for additional user controls. For example, placing words in quotes allows for adjacency queries. A minus sign allows for exclusion of a word.</p>
+                <p>The database contains nearly 90 speeches made by U.S. presidents to Congress from 1945 onward. Most are "State of the Union" speeches typically delivered at the beginning of the year along with other notable addresses, such as George W. Bush's <a href="https://anthonydb.com/sotu/speech/84/" class="link-dark">address to Congress following the Sept. 11 attacks</a>.</p>
+                <p>Because PostgreSQL full-text search converts text to lexemes—linguistic units in a given language, or word roots without the variations created by suffixes—searching for "education" will return results that also include "educate" and "educator."</p>
+
+                <p>Try a <a href="/sotu/search/" class="link-dark">search</a> or see a <a href="/sotu/list/" class="link-dark">list of speeches</a>.</p>
         </div>
         <div class="row">
             <h3>Sources</h3>
-            <p>Text for presidential speeches sourced from:</p>
-            <p>Archive.org, <a href="https://archive.org/details/State-of-the-Union-Addresses-1945-2006">Annual US presidential addresses 1945-2006</a><br>
-                GovInfo, <a href="https://www.govinfo.gov/features/state-of-the-union">Presidential Addresses before a Joint Session of Congress</a><br></p>
-            <p>Some speeches may reflect remarks as prepared for delivery and not as actually delivered. Occasional light editing applied to address typos or formatting.</p>    
+            <p>Text for speeches from:</p>
+            <p>Archive.org, <a href="https://archive.org/details/State-of-the-Union-Addresses-1945-2006" class="link-dark">Annual US presidential addresses 1945-2006</a><br>
+                GovInfo, <a href="https://www.govinfo.gov/features/state-of-the-union" class="link-dark">Presidential Addresses before a Joint Session of Congress</a><br></p>
+            <p>Some speeches may reflect remarks as prepared for delivery, not as actually delivered. Occasional light editing applied to address typos or formatting.</p>    
         </div>
     </div>
 

@@ -12,11 +12,16 @@
             {% regroup speech_list by president as new_list %}
 
             {% for x in new_list %}
-                <ul><b>{{ x.grouper }}</b>
+            <ul class="list-unstyled">
+                <li><b>{{ x.grouper }}</b></li>
+                <ul class="list-styled">
                     {% for item in x.list %}
-                        <ul>{{ item.speech_date }}:  {{ item.title }}. <a href="/sotu/speech/{{ item.id }}"/>Text</a></ul>
+                    <li>{{ item.speech_date }}:  {{ item.title }}. <a href="/sotu/speech/{{ item.id }}"/>Text</a></li>
                     {% endfor %}
                 </ul>
+            </ul>
+
+                
             {% endfor %}
 
         </div>
