@@ -2,10 +2,11 @@
 *.pyc
 __pycache__/
 
-*.db
+.idea/
 /temp/
 /anthonydb/all_static/
 /anthonydb/.env
+*.db
 __old__*
 *.txt
 jquery-*
