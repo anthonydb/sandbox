@@ -6,6 +6,7 @@ __pycache__/
 /temp/
 /anthonydb/all_static/
 /anthonydb/.env
+/sotu/state_union_done/
 *.db
 __old__*
 *.txt
