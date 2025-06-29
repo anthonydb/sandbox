@@ -23,13 +23,26 @@
             <p>Writing is a ton of fun.</p>
         {% endif %}
         <script type="text/javascript">
-          function showBtn() {
-          document.getElementById("reloader").style.visibility = "visible";
-          }
-          setTimeout("showBtn()", 2000); // 1000 = 1 sec
+        // Force scroll to top on page load
+        $(window).on('load', function() {
+            setTimeout(function() {
+            $(window).scrollTop(0);
+            }, 100);
+        });
+        
+        function showBtn() {
+            document.getElementById("reloader").style.visibility = "visible";
+        }
+        
+        function reloadToTop() {
+            window.location.reload(true);
+            return false;
+        }
+        
+        setTimeout("showBtn()", 2000);
         </script>
         <div id="reloader" style="visibility: hidden">
-            <input class="btn" type="submit" onclick="window.location.reload();" value="One more">
+            <input class="btn" type="submit" onclick="return reloadToTop();" value="One more">
         </div>
      </div>
 {% endblock %}
