@@ -1,7 +1,7 @@
 [project]
 name = "sandbox"
 version = "0.1.0"
-description = "Add your description here"
+description = "Django app that runs anthonydebarros.com"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
