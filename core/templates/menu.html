@@ -1,0 +1,51 @@
+<div id="site-menu">
+  <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <nav id="menu-dropdown" aria-hidden="true">
+    <ul>
+      <li{% if request.path == '/' %} class="active"{% endif %}>
+        <a href="/">Home</a>
+      </li>
+      <li{% if '/about/' in request.path %} class="active"{% endif %}>
+        <a href="/about/">About</a>
+      </li>
+      <li>
+        <a href="https://www.practicalsql.com">Book</a>
+      </li>
+      <li class="menu-divider"></li>
+      <li{% if '/words/' in request.path %} class="active"{% endif %}>
+        <a href="/words/">Words on Art</a>
+      </li>
+      <li{% if '/data-miscellany/booklist/' in request.path %} class="active"{% endif %}>
+        <a href="/data-miscellany/booklist/nonfiction/">Bestsellers</a>
+      </li>
+      <li{% if '/sotu/' in request.path %} class="active"{% endif %}>
+        <a href="/sotu/">Presidents' Speeches</a>
+      </li>
+      <li{% if '/data-miscellany/visual-us-births/' in request.path %} class="active"{% endif %}>
+        <a href="/data-miscellany/visual-us-births/">U.S. Births</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  (function () {
+    var toggle = document.getElementById('menu-toggle');
+    var dropdown = document.getElementById('menu-dropdown');
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var isOpen = dropdown.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      dropdown.setAttribute('aria-hidden', !isOpen);
+    });
+    document.addEventListener('click', function () {
+      dropdown.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      dropdown.setAttribute('aria-hidden', 'true');
+    });
+  })();
+</script>

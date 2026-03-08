@@ -41,67 +41,10 @@
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <div id="site-menu">
-      <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav id="menu-dropdown" aria-hidden="true">
-        <ul>
-          <li{% if request.path == '/' %} class="active"{% endif %}>
-            <a href="/">Home</a>
-          </li>
-          <li{% if '/about/' in request.path %} class="active"{% endif %}>
-            <a href="/about/">About</a>
-          </li>
-          <li>
-            <a href="https://www.practicalsql.com">Book</a>
-          </li>
-          <li class="menu-divider"></li>
-          <li{% if '/words/' in request.path %} class="active"{% endif %}>
-            <a href="/words/">Words on Art</a>
-          </li>
-          <li{% if '/data-miscellany/booklist/' in request.path %} class="active"{% endif %}>
-            <a href="/data-miscellany/booklist/nonfiction/">Bestsellers</a>
-          </li>
-          <li{% if '/sotu/' in request.path %} class="active"{% endif %}>
-            <a href="/sotu/">Presidents' Speeches</a>
-          </li>
-          <li{% if '/data-miscellany/visual-us-births/' in request.path %} class="active"{% endif %}>
-            <a href="/data-miscellany/visual-us-births/">U.S. Births</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    {% include 'menu.html' %}
 
     {% block content %}{% endblock %}
 
-    <footer class="site-footer" role="contentinfo">
-      <div class="site-info container">
-        <p><a href="https://www.anthonydebarros.com">Home</a> | <a href="https://www.anthonydebarros.com/sandbox/">Sandbox</a> | <a href="https://www.practicalsql.com">Book</a> | <a href="https://www.anthonydebarros.com/about/">About</a><br/>
-          Copyright {% now "Y" %} Anthony DeBarros<br />
-          Hosted by <a href="https://my.opalstack.com/signup?lmref=MJKmdw" style="color: #a9a9a9;">Opalstack</a><br />
-          <a href="/privacy-policy" style="color: #a9a9a9;">Privacy Policy</a></p>
-      </div><!-- .site-info -->
-    </footer><!-- #colophon .site-footer -->
-
-    <script>
-      (function () {
-        var toggle = document.getElementById('menu-toggle');
-        var dropdown = document.getElementById('menu-dropdown');
-        toggle.addEventListener('click', function (e) {
-          e.stopPropagation();
-          var isOpen = dropdown.classList.toggle('open');
-          toggle.setAttribute('aria-expanded', isOpen);
-          dropdown.setAttribute('aria-hidden', !isOpen);
-        });
-        document.addEventListener('click', function () {
-          dropdown.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-          dropdown.setAttribute('aria-hidden', 'true');
-        });
-      })();
-    </script>
+    {% include 'footer.html' %}
   </body>
 </html>
