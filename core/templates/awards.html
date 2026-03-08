@@ -1,54 +1,26 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
-        <!-- End Google Tag Manager -->
+{% extends "base.html" %}
 
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="me" href="https://opalstack.social/@anthonydb">
+{% block title %}Awards - Anthony DeBarros{% endblock %}
+{% block canonical %}https://anthonydebarros.com/awards/{% endblock %}
+{% block description %}Awards and honors received for journalism and data work.{% endblock %}
+{% block og_title %}Awards - Anthony DeBarros{% endblock %}
+{% block og_description %}I&#8217;ve been fortunate to have some of my work recognized with awards. [&hellip;]{% endblock %}
+{% block og_url %}https://anthonydebarros.com/awards/{% endblock %}
 
-        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-        <meta name="google-site-verification" content="3cXq7qpM2caPBH74yvmYJYdTIw18jO5ESgpf1JNMRTw" />
+{% block extra_head %}
+    <meta property="article:modified_time" content="2026-03-05T01:06:03+00:00" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="1 minute" />
+{% endblock %}
 
-        <title>Awards - Anthony DeBarros</title>
-        <link rel="canonical" href="https://anthonydebarros.com/awards/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Awards - Anthony DeBarros" />
-        <meta property="og:description" content="I&#8217;ve been fortunate to have some of my work recognized with awards. [&hellip;]" />
-        <meta property="og:url" content="https://anthonydebarros.com/awards/" />
-        <meta property="og:site_name" content="Anthony DeBarros" />
-        <meta property="article:modified_time" content="2026-03-05T01:06:03+00:00" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@anthonydb" />
-        <meta name="twitter:label1" content="Est. reading time" />
-        <meta name="twitter:data1" content="1 minute" />
-
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
-
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Fira+Sans:wght@200;400&family=Roboto:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap' type='text/css' media='all' />
-    </head>
-
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLD8S5"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+{% block content %}
     <div class="container">
-
         <article class="post">
             <h1 class="title">Awards</h1>
             <div class="the-content">
 
                 <p>I&#8217;ve been fortunate to have some of my work recognized with awards. Most reflect collaborations with colleagues past and present.</p>
-                <p><a href="https://www.wsj.com/us-news/thomas-matthew-crooks-trump-shooter-78b13a35"><strong>A Portrait Emerges of Trump’s Shooter: Quiet, Withdrawn, With Little Political Footprint</strong></a>, The Wall Street Journal, 2024. Data analysis, reporting (team).</p>
+                <p><a href="https://www.wsj.com/us-news/thomas-matthew-crooks-trump-shooter-78b13a35"><strong>A Portrait Emerges of Trump's Shooter: Quiet, Withdrawn, With Little Political Footprint</strong></a>, The Wall Street Journal, 2024. Data analysis, reporting (team).</p>
                 <ul><li><strong><a href="https://awards.journalists.org/entries/how-the-assassination-attempt-on-donald-trump-unfolded/">Online News Association's Online Journalism Awards.</a></strong> Winner in Breaking News, Large Newsroom (included in portfolio).</li></ul>
                 <p><a href="https://www.wsj.com/articles/rural-broadband-internet-fcc-11655300008"><strong>Why Rural Americans Keep Waiting for Fast Internet, Despite Billions Spent</strong></a>, The Wall Street Journal, 2022. Data analysis, mapping and reporting with Ryan Tracy.</p>
                 <ul><li><strong><a href="https://spjdc.org/2023/06/spjdc-announces-dateline-award-finalists-and-winners/">Washington, DC, Chapter of the Society of Professional Journalists Dateline Awards.</a></strong> Winner in the Infographic category.</li></ul>
@@ -76,11 +48,8 @@
                 <p><b>The Center for Education Reform.&nbsp;</b>Excellence in Journalism Award, First Place (team), for&nbsp;<i>Learning Curve I: A Yearlong Poughkeepsie Journal Project</i>, 1997.<b></b></p>
                 <p><b>New York State Associated Press Association Writing Contest.</b>&nbsp;First Place, Business/Finance, 1995, for&nbsp;<i>Cirrus Logic.</i></p>
                 <p><b>Company:&nbsp;</b>USA TODAY Enterprise All-Star Team member (1999, 2000); Employee of the Year,<i>&nbsp;</i>Poughkeepsie Journal (December 1989).</p>
+
             </div><!-- the-content -->
-            </article>
+        </article>
     </div><!-- / container-->
-
-    {% include 'footer.html' %}
-
-    </body>
-</html>
+{% endblock %}

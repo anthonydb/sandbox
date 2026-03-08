@@ -1,75 +1,19 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
-    <!-- End Google Tag Manager -->
+{% extends "data_miscellany_base.html" %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="me" href="https://opalstack.social/@anthonydb">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="google-site-verification" content="3cXq7qpM2caPBH74yvmYJYdTIw18jO5ESgpf1JNMRTw" />
+{% block title %}Data Miscellany | Anthony DeBarros{% endblock %}
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+{% block canonical %}https://anthonydebarros.com/data-miscellany/{% endblock %}
 
-    <!-- Custom styles for this template -->
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+{% block description %}Miscellaneous data things I've been messing with.{% endblock %}
 
-    <title>Data Miscellany | Anthony DeBarros</title>
-    <link rel="canonical" href="https://anthonydebarros.com/data-miscellany/" />
-    <meta name="description" content="Miscellaneous data things I've been messing with.">
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Data Miscellany - Anthony DeBarros" />
-    <meta property="og:description" content="Miscellaneous data things I've been messing with." />
-    <meta property="og:url" content="https://anthonydebarros.com/data-miscellany/" />
-    <meta property="og:site_name" content="Anthony DeBarros" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@anthonydb" />
+{% block og_title %}Data Miscellany - Anthony DeBarros{% endblock %}
 
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLD8S5"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+{% block og_description %}Miscellaneous data things I've been messing with.{% endblock %}
 
-    <nav class="navbar p-1 navbar-expand fixed-top navbar-dark" style="background-color: #24292e;">
-      <a class="navbar-brand ps-5" href="/">Anthony DeBarros</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/nyt-booklist/">Books</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/words/">Words on Art</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Presidential Speeches
-            </a>
-            <ul class="dropdown-menu" aria-label="Presidential Speeches">
-              <li><a class="dropdown-item" href="/sotu/search/">Search</a></li>
-              <li><a class="dropdown-item" href="/sotu/list/">Speech List</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="/sotu/">About</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
+{% block og_url %}https://anthonydebarros.com/data-miscellany/{% endblock %}
 
-    <div class="container mt-5 pt-4">
+{% block content %}
+    <div class="container">
       <article class="post">
         <h1 class="title">Data Miscellany</h1>
         <div class="the-content">
@@ -84,8 +28,4 @@
         </div><!-- the-content -->
       </article>
     </div><!-- / container-->
-
-    <!-- Optional JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
-</html>
+{% endblock %}

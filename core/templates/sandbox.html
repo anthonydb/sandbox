@@ -1,49 +1,19 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
-        <!-- End Google Tag Manager -->
+{% extends "base.html" %}
 
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="me" href="https://opalstack.social/@anthonydb">
+{% block title %}Sandbox - Anthony DeBarros{% endblock %}
+{% block canonical %}https://anthonydebarros.com/sandbox/{% endblock %}
+{% block description %}I write a lot of code for work, but when I have time I like to experiment for fun.{% endblock %}
+{% block og_title %}Sandbox - Anthony DeBarros{% endblock %}
+{% block og_description %}I write a lot of code for work, but when I have time I like to experiment for fun.{% endblock %}
+{% block og_url %}https://anthonydebarros.com/sandbox/{% endblock %}
 
-        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-        <!-- Jetpack Site Verification Tags -->
-        <meta name="google-site-verification" content="3cXq7qpM2caPBH74yvmYJYdTIw18jO5ESgpf1JNMRTw" />
+{% block extra_head %}
+    <meta property="article:modified_time" content="2022-12-20T01:06:03+00:00" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="1 minute" />
+{% endblock %}
 
-        <title>Sandbox - Anthony DeBarros</title>
-        <link rel="canonical" href="https://anthonydebarros.com/sandbox/" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Sandbox - Anthony DeBarros" />
-        <meta property="og:description" content="I write a lot of code for work, but when I have time I like to experiment for fun." />
-        <meta property="og:url" content="https://anthonydebarros.com/sandbox/" />
-        <meta property="og:site_name" content="Anthony DeBarros" />
-        <meta property="article:modified_time" content="2022-12-20T01:06:03+00:00" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@anthonydb" />
-        <meta name="twitter:label1" content="Est. reading time" />
-        <meta name="twitter:data1" content="1 minute" />
-
-        {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
-
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Fira+Sans:wght@200;400&family=Roboto:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap' type='text/css' media='all' />
-
-    </head>
-
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLD8S5"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
-
+{% block content %}
     <div class="container">
         <article class="post">
             <h1 class="title">Sandbox</h1>
@@ -56,12 +26,9 @@
                 <p><strong><a href="../words/">Words on Art</a></strong><br>
                 A simple collection of quotes by writers, musicians and artists. It's a Django app that tries for a minimalist art-installation take on a blog platform.</p>
                 <p><strong>Data Miscellany</strong><br>
-                Grab bag of data-technique tryouts. <a href="../data-miscellany/visual-us-births/">Visualizing U.S. births</a> using Datawrapper. <a href="../data-miscellany/booklist/nonfiction/">Fetching best-selling books</a> from a data API.</p> 
+                Grab bag of data-technique tryouts. <a href="../data-miscellany/visual-us-births/">Visualizing U.S. births</a> using Datawrapper. <a href="../data-miscellany/booklist/nonfiction/">Fetching best-selling books</a> from a data API.</p>
+
             </div><!-- the-content -->
-            </article>
+        </article>
     </div><!-- / container-->
-
-    {% include 'footer.html' %}
-
-    </body>
-</html>
+{% endblock %}

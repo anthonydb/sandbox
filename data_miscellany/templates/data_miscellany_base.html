@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="en">
   <head>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -9,31 +9,31 @@
       })(window,document,'script','dataLayer','GTM-5MLD8S5');</script>
     <!-- End Google Tag Manager -->
 
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="me" href="https://opalstack.social/@anthonydb">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="google-site-verification" content="3cXq7qpM2caPBH74yvmYJYdTIw18jO5ESgpf1JNMRTw">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="google-site-verification" content="3cXq7qpM2caPBH74yvmYJYdTIw18jO5ESgpf1JNMRTw" />
+
+    <!-- Custom styles for this template -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=PT+Serif:ital,wght@0,400;0,700&display=swap' type='text/css' media='all' />
 
     <title>{% block title %}Anthony DeBarros{% endblock %}</title>
-    <link rel="canonical" href="{% block canonical %}https://anthonydebarros.com/{% endblock %}">
+    <link rel="canonical" href="{% block canonical %}https://anthonydebarros.com/{% endblock %}" />
     <meta name="description" content="{% block description %}{% endblock %}">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="{% block og_type %}article{% endblock %}">
-    <meta property="og:title" content="{% block og_title %}Anthony DeBarros{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}{% endblock %}">
-    <meta property="og:url" content="{% block og_url %}https://anthonydebarros.com/{% endblock %}">
-    <meta property="og:site_name" content="Anthony DeBarros">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@anthonydb">
-
-    {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;400&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=PT+Serif:ital,wght@0,400;0,700&display=swap">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{% block og_title %}Anthony DeBarros{% endblock %}" />
+    <meta property="og:description" content="{% block og_description %}{% endblock %}" />
+    <meta property="og:url" content="{% block og_url %}https://anthonydebarros.com/{% endblock %}" />
+    <meta property="og:site_name" content="Anthony DeBarros" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@anthonydb" />
 
     {% block extra_head %}{% endblock %}
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -77,10 +77,15 @@
 
     {% block content %}{% endblock %}
 
-    {% include 'footer.html' %}
+    <footer class="site-footer" role="contentinfo">
+      <div class="site-info container">
+        <p><a href="https://www.anthonydebarros.com">Home</a> | <a href="https://www.anthonydebarros.com/sandbox/">Sandbox</a> | <a href="https://www.practicalsql.com">Book</a> | <a href="https://www.anthonydebarros.com/about/">About</a><br/>
+          Copyright {% now "Y" %} Anthony DeBarros<br />
+          Hosted by <a href="https://my.opalstack.com/signup?lmref=MJKmdw" style="color: #a9a9a9;">Opalstack</a><br />
+          <a href="/privacy-policy" style="color: #a9a9a9;">Privacy Policy</a></p>
+      </div><!-- .site-info -->
+    </footer><!-- #colophon .site-footer -->
 
-    <!-- Optional JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script>
       (function () {
         var toggle = document.getElementById('menu-toggle');
